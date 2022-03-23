@@ -9,10 +9,6 @@ export function ThemeContextProvider({ children }) {
     dark: { syntax: "#ddd", ui: "#333", bg: "#555" },
   };
 
-  // const [state, dispatch] = useReducer(themeReducer, {
-  //   isLightTheme: true,
-  //   light: { syntax: "#555", ui: "#ddd", bg: "#eee" },
-  // });
   return (
     <ThemeContext.Provider value={{ ...state }}>
       {children}
