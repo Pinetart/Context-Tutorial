@@ -2,9 +2,9 @@ import React from "react";
 import { useTheme } from "../hooks/useTheme";
 
 export default function Navbar() {
-  const { isLightTheme, light, dark } = useTheme();
-
+  const { isLightTheme, light, dark, toggleTheme } = useTheme();
   const theme = isLightTheme ? light : dark;
+
   return (
     <div>
       <nav
@@ -19,6 +19,7 @@ export default function Navbar() {
           <li>About</li>
           <li>Contact</li>
         </ul>
+        <button onClick={toggleTheme}>Click me</button>
       </nav>
     </div>
   );
