@@ -1,9 +1,10 @@
 import React from "react";
 import { useTheme } from "../hooks/useTheme";
-import { ThemeToggle } from "./ThemeToggle";
+import { useBookContext } from "../hooks/useBookContext";
 
 export default function BookList() {
   const { isLightTheme, light, dark } = useTheme();
+  const { books } = useBookContext();
   const theme = isLightTheme ? light : dark;
 
   return (
@@ -12,11 +13,14 @@ export default function BookList() {
       style={{ color: theme.syntax, background: theme.bg }}
     >
       <ul>
-        <li style={{ background: theme.ui }}>the way of kings</li>
-        <li style={{ background: theme.ui }}>the name of the wind</li>
-        <li style={{ background: theme.ui }}>the final empire</li>
+        {books.map((book) => {
+          return (
+            <li key={book.id} style={{ background: theme.ui }}>
+              {book.title}
+            </li>
+          );
+        })}
       </ul>
-      <ThemeToggle />
     </div>
   );
 }

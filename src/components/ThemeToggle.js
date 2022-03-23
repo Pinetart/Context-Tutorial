@@ -1,11 +1,7 @@
 import React from "react";
 import { useTheme } from "../hooks/useTheme";
 
-export function ThemeToggle() {
+export default function ThemeToggle() {
   const { toggleTheme } = useTheme();
-  return (
-    <div>
-      <button onClick={toggleTheme}>Toggle Theme</button>
-    </div>
-  );
+  return <button onClick={toggleTheme}>Toggle the theme</button>;
 }
