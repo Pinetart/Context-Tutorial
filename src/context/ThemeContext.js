@@ -1,6 +1,5 @@
 import { createContext, useReducer, useEffect, useState } from "react";
 
-export const ThemeContext = createContext();
 // const themeReducer = (state, action) => {
 //   switch (action.type) {
 //     case "TOGGLE_MODE":
@@ -21,6 +20,9 @@ export const ThemeContext = createContext();
 //   dispatch({ type: "TOGGLE_MODE" });
 //   console.log(state.isLightTheme);
 // };
+
+export const ThemeContext = createContext();
+
 export function ThemeContextProvider({ children }) {
   const [state, setState] = useState({
     isLightTheme: true,
