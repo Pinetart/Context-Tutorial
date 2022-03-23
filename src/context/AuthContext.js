@@ -8,7 +8,7 @@ export function AuthContextProvider({ children }) {
   });
 
   const toggleAuth = () => {
-    setState({ isAuthenicated: !state.isAuthenticated });
+    setState({ isAuthenticated: !state.isAuthenticated });
   };
 
   return (

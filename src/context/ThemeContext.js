@@ -32,7 +32,6 @@ export function ThemeContextProvider({ children }) {
 
   const toggleTheme = () => {
     setState({ ...state, isLightTheme: !state.isLightTheme });
-    console.log(state.isLightTheme);
   };
 
   return (

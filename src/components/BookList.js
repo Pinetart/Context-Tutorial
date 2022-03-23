@@ -1,5 +1,6 @@
 import React from "react";
 import { useTheme } from "../hooks/useTheme";
+import { ThemeToggle } from "./ThemeToggle";
 
 export default function BookList() {
   const { isLightTheme, light, dark } = useTheme();
@@ -15,6 +16,7 @@ export default function BookList() {
         <li style={{ background: theme.ui }}>the name of the wind</li>
         <li style={{ background: theme.ui }}>the final empire</li>
       </ul>
+      <ThemeToggle />
     </div>
   );
 }
